@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>JL Cars Butuan | Basta JL, LeJit!</title>
+<meta name="description" content="JL Car Trading, Brgy. Mahay, Butuan City (Diversion Road). Quality secondhand cars with a 1–3 days financing approval guarantee. Message or call 0956 466 5377.">
+<meta name="theme-color" content="#070807">
+<meta property="og:title" content="JL Cars Butuan: Basta JL, LeJit!">
+<meta property="og:description" content="Quality secondhand cars on Diversion Road, Mahay. 1–3 days financing approval guarantee.">
+<meta property="og:image" content="../assets/vios-front34.webp">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&display=swap">
+<link rel="preload" as="image" href="../assets/vios-front34.webp" fetchpriority="high">
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.27/dist/lenis.css">
+<style>
+  :root{
+    --ink:#070807; --coal:#101311; --panel:#181C19; --line:#262C27;
+    --text:#EEF2EE; --muted:#A0A9A2; --lime:#8EE12E; --lime-ink:#0B1404;
+    --chrome:linear-gradient(180deg,#FFFFFF 0%,#DDE2E0 44%,#7F8885 52%,#E6EAE8 100%);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;color-scheme:dark}
+  body{margin:0;background:var(--ink);color:var(--text);font:400 16px/1.6 Archivo,system-ui,sans-serif;overflow-x:clip}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  h1,h2,h3{margin:0;line-height:.98;font-weight:880;font-style:italic;font-stretch:122%;letter-spacing:-.015em;text-wrap:balance}
+  p{margin:0}
+  .wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+  .skip{position:absolute;left:-999px;top:8px;background:var(--lime);color:var(--lime-ink);padding:8px 14px;border-radius:8px;z-index:99}
+  .skip:focus{left:12px}
+  :focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+  .chrome{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lime{color:var(--lime)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font-weight:750;font-size:16px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,background-color .15s}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn-lime{background:var(--lime);color:var(--lime-ink)}
+  .btn-ghost{border-color:#3A423C;color:var(--text);background:rgba(7,8,7,.5)}
+  @media (hover:hover){.btn-lime:hover{background:#A3F04A}.btn-ghost:hover{background:var(--panel)}}
+  .btn:active{transform:scale(.97)}
+
+  /* header floats over the hero */
+  .top{position:fixed;inset:0 0 auto;z-index:40;transition:background-color .3s}
+  .top.solid{background:rgba(7,8,7,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .top .wrap{display:flex;align-items:center;gap:14px;height:68px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:880;font-style:italic;font-stretch:122%;font-size:19px}
+  .brand img{width:42px;height:42px;border-radius:50%}
+  .top .btn{margin-left:auto;min-height:42px;padding:0 16px;font-size:15px}
+
+  /* ===== HERO (pinned, scrubbed) ===== */
+  .hero{position:relative;height:100svh;min-height:600px;overflow:hidden;isolation:isolate;display:grid;place-items:center}
+  .hero .bigjl{position:absolute;inset:auto 0 50%;transform:translateY(50%);text-align:center;font-weight:900;font-style:italic;font-stretch:125%;font-size:clamp(220px,46vw,720px);line-height:.8;letter-spacing:-.04em;
+    color:transparent;-webkit-text-stroke:1.5px rgba(238,242,238,.12);z-index:-2;user-select:none}
+  .streaks{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+  .streaks i{position:absolute;height:3px;border-radius:3px;background:linear-gradient(90deg,transparent,var(--lime));transform:skewX(-24deg);opacity:.7}
+  .hero{place-items:start center;padding-top:84px}
+  .hero-car{position:relative;width:min(900px,92vw,calc(60svh * 4 / 3));aspect-ratio:4/3;clip-path:polygon(7% 0,100% 0,93% 100%,0 100%);overflow:hidden;border-radius:14px}
+  .hero-car img{width:100%;height:100%;object-fit:cover}
+  .hero-car::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,8,7,0) 45%,rgba(7,8,7,.85) 100%)}
+  .hero-copy{position:absolute;left:0;right:0;bottom:0;padding:90px 16px clamp(28px,6vh,64px);text-align:center;background:linear-gradient(180deg,rgba(7,8,7,0),rgba(7,8,7,.92) 45%,var(--ink))}
+  .hero .bigjl{-webkit-text-stroke-color:rgba(238,242,238,.16)}
+  .hero-copy .tag{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:12px}
+  .hero-copy h1{font-size:clamp(44px,8.6vw,124px)}
+  .hero-copy h1 em{color:var(--lime);white-space:nowrap}
+  .hero-copy .cta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px}
+  .scrollcue{position:absolute;right:20px;bottom:24px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl}
+  @media (max-width:700px){
+    .hero{place-items:start center;padding-top:96px}
+    .hero-car{width:94vw}
+    .scrollcue{display:none}
+  }
+
+  /* ===== ScrollVelocity marquee (ported from React Bits) ===== */
+  .velo{border-block:1px solid var(--line);background:var(--coal);overflow:hidden;padding:18px 0}
+  .velo-row{display:flex;white-space:nowrap;will-change:transform}
+  .velo-row span{flex:none;padding-right:.6em;font-weight:880;font-style:italic;font-stretch:122%;font-size:clamp(34px,6vw,76px);line-height:1.05}
+  .velo-row span b{color:var(--lime);font-weight:inherit}
+  .velo-row.alt span{color:transparent;-webkit-text-stroke:1.2px rgba(238,242,238,.45)}
+
+  section{padding:96px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:14px}
+  .h2{font-size:clamp(36px,6vw,80px)}
+  .sub{color:var(--muted);max-width:36em;margin-top:16px;font-size:17px}
+
+  /* ===== ROAD TO RELEASE (signature: horizontal road, pinned) ===== */
+  .road{padding:0;background:var(--coal);border-bottom:1px solid var(--line)}
+  .road-head{padding:96px 0 40px}
+  .road-pin{position:relative;height:100svh;overflow:hidden;display:flex;align-items:center}
+  .road-track{display:flex;gap:0;height:100%;align-items:center;padding-left:max(16px,calc((100vw - 1200px)/2))}
+  .lane{position:absolute;left:0;right:0;top:50%;height:6px;transform:translateY(-50%);
+    background:repeating-linear-gradient(90deg,rgba(238,242,238,.5) 0 60px,transparent 60px 120px);opacity:.35}
+  .stop{position:relative;flex:none;width:min(560px,80vw);padding-right:8vw;display:grid;gap:14px;z-index:1}
+  .stop .n{font-weight:900;font-style:italic;font-stretch:125%;font-size:clamp(90px,14vw,190px);line-height:.8;color:transparent;-webkit-text-stroke:2px var(--lime)}
+  .stop h3{font-size:clamp(30px,3.6vw,48px)}
+  .stop p{color:var(--muted);font-size:17px;max-width:24em}
+  .stop.hl .n{color:var(--lime);-webkit-text-stroke:0}
+  .stop.end{width:min(640px,86vw)}
+  .stop.end .btn{justify-self:start}
+  .odo{position:absolute;left:max(16px,calc((100vw - 1200px)/2));bottom:28px;display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);z-index:2}
+  .odo .bar{width:180px;height:4px;background:var(--line);border-radius:4px;overflow:hidden}
+  .odo .bar i{display:block;height:100%;width:100%;background:var(--lime);transform-origin:left;transform:scaleX(0)}
+  /* phones / no-motion: vertical route instead of pinning */
+  @media (max-width:760px), (prefers-reduced-motion:reduce){
+    .road-pin{height:auto;display:block;padding-bottom:80px}
+    .road-track{display:grid;gap:44px;padding:0 16px 0 52px;position:relative}
+    .road-track::before{content:"";position:absolute;left:24px;top:8px;bottom:8px;width:4px;background:repeating-linear-gradient(180deg,rgba(238,242,238,.35) 0 26px,transparent 26px 52px)}
+    .lane,.odo{display:none}
+    .stop,.stop.end{width:auto;padding-right:0}
+    .stop .n{font-size:84px}
+  }
+
+  /* ===== FEATURED UNIT (pinned spec list + crossfading photos) ===== */
+  .unit-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center;margin-top:44px}
+  .specs{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+  .specs li{display:flex;align-items:baseline;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:clamp(19px,2.2vw,26px);font-weight:700;font-stretch:108%;color:#5C655F;transition:color .3s}
+  .specs li small{flex:none;width:2.2em;font-size:13px;letter-spacing:.1em;color:var(--lime);font-weight:700}
+  .specs li.on{color:var(--text)}
+  .photos{position:relative;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:var(--panel)}
+  .photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
+  .photos img:first-child{opacity:1}
+  .unit-foot{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center}
+  .unit-foot p{color:var(--muted);font-size:14px;max-width:30em}
+  @media (max-width:860px){.unit-grid{grid-template-columns:1fr}.photos{order:-1}.specs li{color:var(--text)}}
+
+  /* ===== LOT (parallax column) ===== */
+  .lot{background:var(--coal);border-block:1px solid var(--line);overflow:hidden}
+  .lot-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+  .lot-row a{position:relative;display:block;border-radius:14px;overflow:hidden;aspect-ratio:9/15;text-decoration:none;background:var(--panel)}
+  .lot-row a:nth-child(2){margin-top:80px}
+  .lot-row img{width:100%;height:115%;object-fit:cover}
+  .lot-row span{position:absolute;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;gap:8px;background:rgba(7,8,7,.85);border-radius:10px;padding:10px 12px;font-size:14px;font-weight:650}
+  .lot-row span i{font-style:normal;color:var(--lime)}
+  @media (max-width:700px){.lot-row{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:74%;overflow-x:auto;scroll-snap-type:x mandatory}.lot-row a{scroll-snap-align:start}.lot-row a:nth-child(2){margin-top:0}.lot-row img{height:100%}}
+
+  /* ===== VISIT ===== */
+  .visit{position:relative;overflow:hidden}
+  .visit-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;margin-top:40px;align-items:start}
+  .addr{font-size:clamp(22px,2.6vw,30px);font-weight:750;line-height:1.3;font-stretch:108%}
+  .addr + .btn{margin-top:22px}
+  .phones{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+  .phones a{display:flex;justify-content:space-between;align-items:center;text-decoration:none;border:1px solid var(--line);background:var(--coal);border-radius:12px;padding:16px 18px;font-size:20px;font-weight:750;font-variant-numeric:tabular-nums}
+  .phones small{font-size:13px;color:var(--lime);font-weight:650}
+  .muted{color:var(--muted);font-size:15px;margin-top:12px}
+  .slogan{margin-top:70px;font-size:clamp(40px,8vw,110px);font-weight:900;font-style:italic;font-stretch:125%;line-height:1;letter-spacing:-.02em}
+  .shiny{display:inline-block;background-image:linear-gradient(120deg,var(--lime) 0%,var(--lime) 38%,#F4FFE6 50%,var(--lime) 62%,var(--lime) 100%);background-size:250% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent}
+  @media (max-width:800px){.visit-grid{grid-template-columns:1fr}}
+
+  footer{border-top:1px solid var(--line);padding:30px 0 110px;color:var(--muted);font-size:14px}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
+  footer a{color:var(--text)}
+  .alt{display:inline-flex;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:8px 14px}
+  @media (min-width:761px){footer{padding-bottom:30px}}
+
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(3,1fr);background:rgba(16,19,17,.96);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+  .mbar a{display:grid;justify-items:center;gap:2px;padding:9px 0 10px;font-size:12px;font-weight:700;text-decoration:none}
+  .mbar a:first-child{color:var(--lime)}
+  .mbar svg{width:22px;height:22px}
+  @media (min-width:761px){.mbar{display:none}}
+
+  /* message chooser */
+  .msg{margin:auto;border:1px solid var(--line);padding:0;border-radius:18px;width:min(420px,calc(100dvw - 24px));background:var(--coal);color:var(--text);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+  .msg:modal{overscroll-behavior:contain}
+  .msg::backdrop{background:rgba(0,0,0,.75);overflow:hidden;overscroll-behavior:contain}
+  .msg-inner{padding:24px 22px 22px;display:grid;gap:12px}
+  .msg-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+  .msg h2{font-size:28px}
+  .msg-head p{color:var(--muted);font-size:14px;margin-top:6px}
+  .msg-head form{flex:none}
+  .msg-close{width:40px;height:40px;padding:0;border-radius:50%;border:1px solid #3A423C;background:var(--panel);color:var(--text);font-size:18px;font-weight:800;cursor:pointer}
+  .msg .btn{width:100%;touch-action:manipulation}
+  .msg-note{font-size:14px;background:var(--panel);border-left:3px solid var(--lime);border-radius:8px;padding:10px 12px;line-height:1.45;display:grid;gap:4px}
+  .msg-note-small{font-size:12px;color:var(--muted)}
+  .msg [hidden]{display:none}
+  @media (max-width:600px){
+    .msg:modal{margin:auto auto 0;width:100dvw;max-width:100dvw;border-radius:18px 18px 0 0;border-width:1px 0 0}
+    .msg-inner{padding-bottom:max(22px,env(safe-area-inset-bottom))}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#main" aria-label="JL Cars, back to top"><img src="../assets/logo-160.webp" width="42" height="42" alt="">JL CARS</a>
+    <a class="btn btn-lime" href="https://m.me/61564756125784" target="_blank" rel="noopener">Message us</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-label="JL Cars" style="padding-bottom:0">
+    <div class="bigjl" aria-hidden="true">JL</div>
+    <div class="streaks" aria-hidden="true"></div>
+    <div class="hero-car"><img src="../assets/vios-front34.webp" srcset="../assets/vios-front34-sm.webp 480w, ../assets/vios-front34.webp 960w" sizes="(max-width:700px) 94vw, 900px" width="960" height="720" alt="Black 2024 Toyota Vios on the JL Cars lot" fetchpriority="high"></div>
+    <div class="hero-copy">
+      <p class="tag">JL Car Trading · Mahay, Butuan City</p>
+      <h1><span class="chrome">Car loan approved</span><br><em>in 1–3 days.</em></h1>
+      <div class="cta">
+        <a class="btn btn-lime" href="https://m.me/61564756125784" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12z"/></svg>Ask about a unit</a>
+        <a class="btn btn-ghost" href="#route">How financing works</a>
+      </div>
+    </div>
+    <p class="scrollcue" aria-hidden="true">Scroll to drive</p>
+  </section>
+
+  <div class="velo" aria-label="1–3 days approval guarantee. Basta JL, LeJit! Diversion Road, Mahay, Butuan City.">
+    <div class="velo-row" data-velo="1" aria-hidden="true"><span>1–3 DAYS APPROVAL <b>✦</b> BASTA JL, LEJIT! <b>✦</b></span></div>
+    <div class="velo-row alt" data-velo="-1" aria-hidden="true"><span>DIVERSION ROAD · MAHAY · BUTUAN CITY ✦</span></div>
+  </div>
+
+  <section class="road" id="route">
+    <div class="wrap road-head">
+      <p class="eyebrow">The road to your release</p>
+      <h2 class="h2">You choose the car. <span class="chrome">We do the running around.</span></h2>
+      <p class="sub">No need to face the bank on your own. Pass the requirements and JL takes care of getting you approved. <em>Walay hasol, walay labad sa ulo.</em></p>
+    </div>
+    <div class="road-pin">
+      <div class="lane" aria-hidden="true"></div>
+      <ol class="road-track" style="list-style:none;margin:0">
+        <li class="stop"><span class="n" aria-hidden="true">01</span><h3>Pick your unit</h3><p>Visit the lot on Diversion Road or message us for photos and details of what's available.</p></li>
+        <li class="stop"><span class="n" aria-hidden="true">02</span><h3>Ask for the list</h3><p>We tell you exactly which requirements you need, so nothing gets sent back.</p></li>
+        <li class="stop hl"><span class="n" aria-hidden="true">03</span><h3>Approved in 1–3 days</h3><p>Pass everything and we work on your approval. That's the JL guarantee.</p></li>
+        <li class="stop end"><span class="n" aria-hidden="true">04</span><h3>Drive it home</h3><p>Pay the downpayment, sign the papers and the car is yours.</p><a class="btn btn-lime" href="https://m.me/61564756125784" target="_blank" rel="noopener">Start with a message</a></li>
+      </ol>
+      <div class="odo" aria-hidden="true">Route <span class="bar"><i></i></span></div>
+    </div>
+  </section>
+
+  <section id="unit">
+    <div class="wrap">
+      <p class="eyebrow">Sample unit · posted Nov 19, 2026</p>
+      <h2 class="h2">2024 Toyota Vios XLE <span class="chrome">1.3 CVT</span></h2>
+      <div class="unit-grid">
+        <ul class="specs">
+          <li class="on"><small>01</small>Automatic transmission, gas engine</li>
+          <li><small>02</small>Only 16,xxx km on the odometer</li>
+          <li><small>03</small>All stock, all original</li>
+          <li><small>04</small>No engine issue, no flood issue</li>
+          <li><small>05</small>Complete and updated papers</li>
+        </ul>
+        <div class="photos" aria-label="Photos of the Vios">
+          <img src="../assets/vios-front34.webp" width="960" height="720" alt="Front three-quarter view" loading="lazy">
+          <img src="../assets/vios-cluster.webp" width="960" height="720" alt="Odometer reading" loading="lazy">
+          <img src="../assets/vios-rear34.webp" width="960" height="720" alt="Rear three-quarter view" loading="lazy">
+          <img src="../assets/vios-dash.webp" width="960" height="720" alt="Dashboard and automatic gear lever" loading="lazy">
+          <img src="../assets/vios-rear.webp" width="960" height="794" alt="Rear view" loading="lazy">
+        </div>
+      </div>
+      <div class="unit-foot">
+        <a class="btn btn-lime" href="https://m.me/61564756125784" target="_blank" rel="noopener">Ask if it's still available</a>
+        <p>Units move fast. Message us for the current price, downpayment and monthly terms.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lot" id="lot">
+    <div class="wrap">
+      <p class="eyebrow">On the lot</p>
+      <h2 class="h2">New units and releases, <span class="chrome">every week.</span></h2>
+      <div class="lot-row">
+        <a href="https://www.facebook.com/reel/1157217176999527/" target="_blank" rel="noopener"><img src="../assets/lot-sign.webp" width="540" height="960" alt="The JL Cars signboard on Diversion Road" loading="lazy"><span>Our sign on Diversion Road <i>Reel ↗</i></span></a>
+        <a href="https://www.facebook.com/reel/1469507215104012/" target="_blank" rel="noopener"><img src="../assets/lot-yard.webp" width="540" height="960" alt="Cars lined up under the shade nets" loading="lazy"><span>Units under the shade <i>Reel ↗</i></span></a>
+        <a href="https://www.facebook.com/reel/1670991744577370/" target="_blank" rel="noopener"><img src="../assets/lot-mirage.webp" width="540" height="960" alt="A red Mitsubishi hatchback at JL Cars" loading="lazy"><span>More units on our reels <i>Reel ↗</i></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <p class="eyebrow">Visit or call</p>
+      <h2 class="h2">Drop by the lot <span class="chrome">in Mahay.</span></h2>
+      <div class="visit-grid">
+        <div>
+          <p class="addr">P-17B Brgy. Mahay, Diversion Road<br>Butuan City 8600</p>
+          <a class="btn btn-lime" href="https://www.google.com/maps/search/?api=1&amp;query=JL+Cars+Brgy.+Mahay+Diversion+Road+Butuan+City" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Get directions</a>
+          <p class="muted">Message us first so your unit is ready to view.</p>
+        </div>
+        <ul class="phones">
+          <li><a href="tel:+639564665377">0956 466 5377 <small>Main</small></a></li>
+          <li><a href="tel:+639454514026">0945 451 4026 <small>Call</small></a></li>
+          <li><a href="tel:+639924939798">0992 493 9798 <small>Call</small></a></li>
+        </ul>
+      </div>
+      <p class="slogan" aria-label="Basta JL, LeJit!"><span class="shiny" data-shiny>Basta JL, LeJit!</span></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="yr">2026</span> JL Car Trading · Driven by trust, powered by quality.</p>
+    <a class="alt" href="../">← See Option A</a>
+    <p>Concept website. <a href="https://kendamin.github.io/" target="_blank" rel="noopener">Watermark by Ken Abuda</a></p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="https://m.me/61564756125784" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12z"/></svg>Message</a>
+  <a href="tel:+639564665377"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=JL+Cars+Brgy.+Mahay+Diversion+Road+Butuan+City" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Directions</a>
+</nav>
+
+<dialog class="msg" id="msgDialog" closedby="any" aria-labelledby="msg-title">
+  <div class="msg-inner">
+    <div class="msg-head">
+      <div><h2 id="msg-title">Message JL Cars</h2><p>Ask about available units, downpayment or financing.</p></div>
+      <form method="dialog"><button class="msg-close" aria-label="Close">✕</button></form>
+    </div>
+    <a class="btn btn-lime" id="msgApp" hidden href="fb-messenger://user-thread/61564756125784">Open Messenger app</a>
+    <a class="btn btn-ghost" href="https://m.me/61564756125784" target="_blank" rel="noopener">Message on Facebook</a>
+    <a class="btn btn-ghost" href="tel:+639564665377">Call 0956 466 5377</a>
+    <a class="btn btn-ghost" href="sms:+639564665377">Send a text</a>
+    <div class="msg-note" id="msgNote" hidden>
+      <p>See <strong>"Get the Messenger app"</strong>? Tap <strong>Open in Messenger</strong> below it instead.</p>
+      <p class="msg-note-small">Still not opening? Tap <strong>•••</strong> and choose <strong>Open in browser</strong>.</p>
+    </div>
+  </div>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.3.27/dist/lenis.min.js"></script>
+<script>
+  document.getElementById("yr").textContent = new Date().getFullYear();
+  const header = document.getElementById("top");
+
+  let lenis = null;
+  if (window.gsap) gsap.registerPlugin(ScrollTrigger);
+  if (window.Lenis && window.gsap) {
+    lenis = new Lenis({ anchors: { offset: -68 }, allowNestedScroll: true });
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add(t => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+  }
+  const solid = () => header.classList.toggle("solid", scrollY > innerHeight * .6);
+  addEventListener("scroll", solid, { passive: true }); solid();
+
+  // ---- hero speed streaks (a handful of DOM lines, no canvas)
+  const streaks = document.querySelector(".streaks");
+  for (let i = 0; i < 9; i++) {
+    const s = document.createElement("i");
+    s.style.top = (8 + Math.random() * 84) + "%";
+    s.style.width = (80 + Math.random() * 260) + "px";
+    s.style.left = "-30%";
+    streaks.appendChild(s);
+  }
+
+  if (window.gsap) {
+    const mm = gsap.matchMedia();
+
+    mm.add("(prefers-reduced-motion: no-preference)", () => {
+      // streaks race across
+      gsap.utils.toArray(".streaks i").forEach(s => gsap.to(s, { left: "130%", duration: gsap.utils.random(1.2, 2.6), delay: gsap.utils.random(0, 3), ease: "none", repeat: -1, repeatDelay: gsap.utils.random(.5, 3) }));
+      // intro: car drives in from the right
+      gsap.from(".hero-car", { xPercent: 18, opacity: 0, duration: 1.1, ease: "power3.out" });
+      gsap.from(".bigjl", { xPercent: -8, opacity: 0, duration: 1.4, ease: "power3.out" });
+
+      // ShinyText sheen (React Bits port)
+      gsap.fromTo("[data-shiny]", { backgroundPosition: "100% 0" }, { backgroundPosition: "0% 0", duration: 1.6, ease: "sine.inOut", repeat: -1, repeatDelay: 2.2 });
+
+      // ScrollVelocity (React Bits port): steady drift that speeds up and flips with scroll velocity
+      document.querySelectorAll("[data-velo]").forEach(row => {
+        const span = row.firstElementChild;
+        while (row.scrollWidth < innerWidth * 3) row.appendChild(span.cloneNode(true));
+        const w = span.offsetWidth, dir0 = +row.dataset.velo;
+        let x = 0, dir = dir0;
+        gsap.ticker.add((t, dt) => {
+          const v = lenis ? lenis.velocity : 0;
+          if (v) dir = Math.sign(v) * dir0;
+          x -= dir * (60 + Math.min(Math.abs(v) * 40, 900)) * dt / 1000;
+          x = gsap.utils.wrap(-w, 0, x);
+          row.style.transform = `translate3d(${x}px,0,0)`;
+        });
+      });
+
+      // featured unit: crossfade photos and light up specs as you read
+      const specs = gsap.utils.toArray(".specs li"), pics = gsap.utils.toArray(".photos img");
+      ScrollTrigger.create({
+        trigger: ".unit-grid", start: "top 70%", end: "bottom 30%",
+        onUpdate: self => {
+          const i = Math.min(specs.length - 1, Math.floor(self.progress * specs.length));
+          specs.forEach((li, k) => li.classList.toggle("on", k <= i));
+          pics.forEach((p, k) => gsap.to(p, { opacity: k === i ? 1 : 0, duration: .45, overwrite: true }));
+        }
+      });
+
+      // generic reveals
+      ScrollTrigger.batch(".eyebrow, .h2, .sub, .addr, .phones li", { start: "top 90%", once: true,
+        onEnter: els => gsap.from(els, { y: 28, opacity: 0, duration: .8, ease: "power3.out", stagger: .07 }) });
+    });
+
+    // desktop + tablet: pinned hero and horizontal "road"
+    mm.add("(min-width: 761px) and (prefers-reduced-motion: no-preference)", () => {
+      gsap.timeline({ scrollTrigger: { trigger: ".hero", start: "top top", end: "+=70%", pin: true, scrub: .6 } })
+        .to(".hero-car", { scale: 1.12, yPercent: -6, ease: "none" }, 0)
+        .to(".bigjl", { xPercent: -14, ease: "none" }, 0)
+        .to(".hero-copy", { yPercent: -18, ease: "none" }, 0)
+        .to(".scrollcue", { opacity: 0, ease: "none" }, 0);
+
+      const track = document.querySelector(".road-track");
+      const dist = () => track.scrollWidth - innerWidth;
+      gsap.timeline({ scrollTrigger: { trigger: ".road-pin", start: "top top", end: () => "+=" + dist(), pin: true, scrub: .5, invalidateOnRefresh: true } })
+        .to(track, { x: () => -dist(), ease: "none" }, 0)
+        .to(".lane", { backgroundPositionX: () => -dist() * 1.6 + "px", ease: "none" }, 0)
+        .to(".odo .bar i", { scaleX: 1, ease: "none" }, 0);
+
+      gsap.utils.toArray(".lot-row img").forEach((img, i) =>
+        gsap.fromTo(img, { yPercent: -10 }, { yPercent: [0, 4, -2][i], ease: "none", scrollTrigger: { trigger: ".lot", start: "top bottom", end: "bottom top", scrub: true } }));
+    });
+
+    // phones: route line reveals step by step
+    mm.add("(max-width: 760px) and (prefers-reduced-motion: no-preference)", () => {
+      gsap.utils.toArray(".stop").forEach(s => gsap.from(s, { x: 30, opacity: 0, duration: .7, ease: "power3.out", scrollTrigger: { trigger: s, start: "top 85%", once: true } }));
+    });
+  }
+
+  // ---- Message chooser
+  const msgDialog = document.getElementById("msgDialog");
+  const isPhone = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Macintosh/.test(navigator.userAgent));
+  const inFacebookApp = /FBAN|FBAV|FB_IAB|FBIOS|Messenger|Instagram/i.test(navigator.userAgent);
+  if (isPhone) document.getElementById("msgApp").hidden = false;
+  if (inFacebookApp) document.getElementById("msgNote").hidden = false;
+  document.addEventListener("click", e => {
+    const a = e.target.closest('a[href^="https://m.me/"]');
+    if (!a || msgDialog.contains(a)) return;
+    e.preventDefault();
+    lenis?.stop(); msgDialog.showModal();
+    msgDialog.querySelector(".btn:not([hidden])")?.focus();
+  });
+  msgDialog.addEventListener("close", () => lenis?.start());
+  if (!("closedBy" in HTMLDialogElement.prototype)) {        // Safari: tap outside to close
+    let down = false;
+    const out = e => { const r = msgDialog.getBoundingClientRect(); return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom; };
+    msgDialog.addEventListener("pointerdown", e => { down = out(e); });
+    msgDialog.addEventListener("pointerup", e => { if (down && out(e)) msgDialog.close(); });
+  }
+</script>
+</body>
+</html>
