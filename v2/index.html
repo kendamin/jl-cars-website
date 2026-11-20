@@ -150,6 +150,72 @@
   .shiny{display:inline-block;background-image:linear-gradient(120deg,var(--lime) 0%,var(--lime) 38%,#F4FFE6 50%,var(--lime) 62%,var(--lime) 100%);background-size:250% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent}
   @media (max-width:800px){.visit-grid{grid-template-columns:1fr}}
 
+
+  /* ===== Car wall ===== */
+  .wall-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:10px 24px}
+  .wall-count{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+  .chips{display:flex;gap:8px;margin:22px 0 26px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+  .chips button{flex:none;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);font:600 14px/1 Archivo,system-ui,sans-serif;cursor:pointer}
+  .chips button[aria-pressed="true"]{background:var(--lime);border-color:var(--lime);color:var(--lime-ink)}
+  .wall{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:34px 22px}
+  .car[hidden]{display:none}
+  .car > button{all:unset;box-sizing:border-box;display:grid;width:100%;cursor:pointer;border-radius:12px}
+  .car > button:focus-visible{outline:3px solid var(--lime);outline-offset:6px}
+  .car-photo{position:relative;display:block;aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:var(--panel)}
+  .car-photo img{width:100%;height:100%;object-fit:cover;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+  @media (hover:hover){.car > button:hover .car-photo img{transform:scale(1.05)}.car > button:hover .car-model{color:var(--lime)}}
+  .car-bar{display:block;height:9px;margin:14px 0 12px;border-radius:3px;background:linear-gradient(180deg,#3a3f3c,#1b1f1c);box-shadow:0 10px 18px -6px rgba(142,225,46,.18)}
+  .car-brand{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .car-model{font-weight:850;font-style:italic;font-stretch:115%;font-size:clamp(17px,1.7vw,21px);line-height:1.1;margin-top:3px;text-transform:uppercase;transition:color .2s}
+  .car-meta{font-size:13px;color:var(--muted);margin-top:5px;font-variant-numeric:tabular-nums}
+  .tag-res{position:absolute;top:10px;left:10px;background:var(--ink);color:var(--lime);border:1px solid var(--lime);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:999px}
+  .car-more a{display:grid;place-content:center;gap:8px;text-align:center;height:100%;min-height:220px;border:1.5px dashed #3a423c;border-radius:12px;padding:20px;text-decoration:none}
+  .car-more strong{font-weight:850;font-style:italic;font-stretch:118%;font-size:20px;text-transform:uppercase}
+  .car-more span{font-size:13px;color:var(--muted)}
+  @media (hover:hover){.car-more a:hover{border-color:var(--lime)}}
+  .wall-note{margin-top:30px;color:var(--muted);font-size:14px}
+  @media (max-width:1000px){.wall{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:600px){.wall{grid-template-columns:repeat(2,1fr);gap:26px 12px}.car-bar{height:7px;margin:10px 0 9px}.car-brand{font-size:10.5px}.car-meta{font-size:12px}.car-more a{min-height:160px}}
+  /* unit dialog */
+  .unit-dlg .u-img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:var(--panel)}
+  .u-specs{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+  .u-specs li{display:flex;gap:10px;font-size:15px}
+  .u-specs li::before{content:"";flex:none;width:8px;height:8px;margin-top:8px;border-radius:50%;background:var(--lime)}
+  .u-res{color:var(--lime)!important;font-weight:700}
+  .u-toast{font-size:13px;color:var(--lime);min-height:1em;text-align:center}
+  .unit-dlg .msg-inner{max-height:calc(100dvh - 24px);overflow:auto}
+
+  /* ===== Reviews / trust ===== */
+  .quotes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+  .q{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+  .q blockquote{margin:0;font-size:16px;line-height:1.5}
+  .q-big{grid-column:span 2;grid-row:span 2;background:var(--lime);border-color:var(--lime);color:var(--lime-ink)}
+  .q-big blockquote{font-size:clamp(20px,2.4vw,28px);font-weight:700;line-height:1.3;font-stretch:105%}
+  .q figcaption{font-weight:750;font-size:15px}
+  .q figcaption span{display:block;font-weight:500;font-size:13px;color:var(--muted)}
+  .q-big figcaption span{color:#2B4410}
+  .released{margin-top:44px}
+  .released-t{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+  .released ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+  .released li{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-weight:650;font-size:14px}
+  .package{margin-top:44px;display:grid;grid-template-columns:1fr 1.4fr;gap:28px;align-items:start;border:1px solid var(--line);border-radius:16px;padding:28px;background:var(--coal)}
+  .package h3{font-size:clamp(24px,3vw,34px)}
+  .package ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+  .package li{display:flex;gap:10px;align-items:center;font-weight:650}
+  .package li::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B1404' stroke-width='3.5'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
+  @media (max-width:900px){.quotes{grid-template-columns:1fr 1fr}.package{grid-template-columns:1fr}}
+  @media (max-width:560px){.quotes{grid-template-columns:1fr}.q-big{grid-column:auto;grid-row:auto}.package{padding:22px}.package ul{grid-template-columns:1fr}}
+
+  /* ===== Map ===== */
+  .map{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--panel);aspect-ratio:16/10;margin-top:28px}
+  .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .map-open{position:absolute;right:10px;bottom:10px;background:var(--ink);color:var(--text);text-decoration:none;font-size:13px;font-weight:700;padding:8px 12px;border-radius:999px;border:1px solid var(--line)}
+  @media (max-width:600px){.map{aspect-ratio:4/5}}
+
+  .trust{border-top:1px solid var(--line)}
+  .visit{border-top:1px solid var(--line)}
+  .wall-sec .h2{max-width:12em}
+
   footer{border-top:1px solid var(--line);padding:30px 0 110px;color:var(--muted);font-size:14px}
   footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
   footer a{color:var(--text)}
@@ -231,33 +297,26 @@
     </div>
   </section>
 
-  <section id="unit">
+  <section id="units" class="wall-sec">
     <div class="wrap">
-      <p class="eyebrow">Sample unit · posted Nov 19, 2026</p>
-      <h2 class="h2">2024 Toyota Vios XLE <span class="chrome">1.3 CVT</span></h2>
-      <div class="unit-grid">
-        <ul class="specs">
-          <li class="on"><small>01</small>Automatic transmission, gas engine</li>
-          <li><small>02</small>Only 16,xxx km on the odometer</li>
-          <li><small>03</small>All stock, all original</li>
-          <li><small>04</small>No engine issue, no flood issue</li>
-          <li><small>05</small>Complete and updated papers</li>
-        </ul>
-        <div class="photos" aria-label="Photos of the Vios">
-          <img src="../assets/vios-front34.webp" width="960" height="720" alt="Front three-quarter view" loading="lazy">
-          <img src="../assets/vios-cluster.webp" width="960" height="720" alt="Odometer reading" loading="lazy">
-          <img src="../assets/vios-rear34.webp" width="960" height="720" alt="Rear three-quarter view" loading="lazy">
-          <img src="../assets/vios-dash.webp" width="960" height="720" alt="Dashboard and automatic gear lever" loading="lazy">
-          <img src="../assets/vios-rear.webp" width="960" height="794" alt="Rear view" loading="lazy">
+      <div class="wall-head">
+        <div>
+          <p class="eyebrow rv">The lot · November 2026</p>
+          <h2 class="h2 rv">Units we posted this month.</h2>
         </div>
+        <p class="wall-count rv" id="wallCount">21 units posted</p>
       </div>
-      <div class="unit-foot">
-        <a class="btn btn-lime" href="https://m.me/61564756125784" target="_blank" rel="noopener">Ask if it's still available</a>
-        <p>Units move fast. Message us for the current price, downpayment and monthly terms.</p>
+      <div class="chips rv" role="group" aria-label="Filter units">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="car" aria-pressed="false">Sedans &amp; hatchbacks</button>
+        <button type="button" data-filter="family" aria-pressed="false">7-seaters &amp; SUVs</button>
+        <button type="button" data-filter="work" aria-pressed="false">Pickups &amp; utility</button>
       </div>
+      <ul class="wall" id="wall" data-base="../"></ul>
+      <noscript><p class="sub">See all our units on <a href="https://www.facebook.com/profile.php?id=61564756125784">our Facebook page</a>.</p></noscript>
+      <p class="wall-note rv">Tap a car for details. Units move fast, so message us for the current price, downpayment and monthly terms.</p>
     </div>
   </section>
-
   <section class="lot" id="lot">
     <div class="wrap">
       <p class="eyebrow">On the lot</p>
@@ -270,6 +329,53 @@
     </div>
   </section>
 
+  <section id="reviews" class="trust">
+    <div class="wrap">
+      <p class="eyebrow rv">From our buyers</p>
+      <h2 class="h2 rv">100% recommend us on Facebook.</h2>
+      <p class="sub rv">15 reviews, all recommending JL. Here's what some of them wrote.</p>
+      <div class="quotes">
+        <figure class="q q-big rv">
+          <blockquote lang="ceb">“Dako kaayo og salamat sa JL Car Trading sa hapsay ug paspas nga transaksiyon! Nindot kaayo ang kalidad sa unit nga akong nakuha, limpyo, ug walay angay ikabalaka.”</blockquote>
+          <figcaption>Yeng D. <span>Facebook review</span></figcaption>
+        </figure>
+        <figure class="q rv">
+          <blockquote lang="ceb">“Very considerate sila sa schedule sa clients bisan maabtan ug gabii, maghulat gihapon sila para ma-accommodate ka.”</blockquote>
+          <figcaption>Jean A. <span>Facebook review</span></figcaption>
+        </figure>
+        <figure class="q rv">
+          <blockquote>“Fast approval &amp; goodz mga unit.”</blockquote>
+          <figcaption>Vante U. <span>Facebook review</span></figcaption>
+        </figure>
+        <figure class="q rv">
+          <blockquote lang="tl">“Highly recommended, madaling kausap mga tao dria.”</blockquote>
+          <figcaption>Mi Kael <span>Facebook review</span></figcaption>
+        </figure>
+        <figure class="q rv">
+          <blockquote>“Highly recommended JL Car Trading, grabe ka accommodating. Hands up!”</blockquote>
+          <figcaption>Juan P. <span>Facebook review</span></figcaption>
+        </figure>
+      </div>
+      <div class="released rv">
+        <p class="released-t">Recently released to buyers from</p>
+        <ul>
+          <li>Dipolog City</li><li>Surigao City</li><li>Leyte</li><li>Tandag City</li><li>Barobo</li><li>Pagadian City</li><li>Bunawan</li><li>Gingoog City</li><li>Buenavista</li><li>Butuan City</li>
+        </ul>
+      </div>
+      <div class="package rv">
+        <div>
+          <p class="eyebrow">Special buyer package</p>
+          <h3>Included when you buy a unit</h3>
+          <p class="muted">As listed on our Facebook posts. Ask us what applies to your unit.</p>
+        </div>
+        <ul>
+          <li>Transfer of ownership</li><li>Deed of sale</li><li>LTO registration</li><li>Car tint installation</li>
+          <li>Buffing &amp; detailing</li><li>Change oil</li><li>Back to zero</li><li>Set of tools</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="visit" id="visit">
     <div class="wrap">
       <p class="eyebrow">Visit or call</p>
@@ -277,7 +383,7 @@
       <div class="visit-grid">
         <div>
           <p class="addr">P-17B Brgy. Mahay, Diversion Road<br>Butuan City 8600</p>
-          <a class="btn btn-lime" href="https://www.google.com/maps/search/?api=1&amp;query=JL+Cars+Brgy.+Mahay+Diversion+Road+Butuan+City" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Get directions</a>
+          <a class="btn btn-lime" href="https://www.google.com/maps/dir/?api=1&amp;destination=8.9236685,125.561075" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Get directions</a>
           <p class="muted">Message us first so your unit is ready to view.</p>
         </div>
         <ul class="phones">
@@ -286,6 +392,10 @@
           <li><a href="tel:+639924939798">0992 493 9798 <small>Call</small></a></li>
         </ul>
       </div>
+        <div class="map rv">
+          <iframe title="Map: JL Car Trading, Brgy. Mahay, Butuan City" src="https://maps.google.com/maps?q=8.9236685,125.561075&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a class="map-open" href="https://maps.google.com/?cid=6376802317416099192" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+        </div>
       <p class="slogan" aria-label="Basta JL, LeJit!"><span class="shiny" data-shiny>Basta JL, LeJit!</span></p>
     </div>
   </section>
@@ -302,7 +412,7 @@
 <nav class="mbar" aria-label="Quick actions">
   <a href="https://m.me/61564756125784" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12z"/></svg>Message</a>
   <a href="tel:+639564665377"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
-  <a href="https://www.google.com/maps/search/?api=1&amp;query=JL+Cars+Brgy.+Mahay+Diversion+Road+Butuan+City" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Directions</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=8.9236685,125.561075" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Directions</a>
 </nav>
 
 <dialog class="msg" id="msgDialog" closedby="any" aria-labelledby="msg-title">
@@ -322,6 +432,21 @@
   </div>
 </dialog>
 
+<dialog class="msg unit-dlg" id="unitDialog" closedby="any" aria-labelledby="uTitle">
+  <div class="msg-inner">
+    <div class="msg-head">
+      <div><h2 id="uTitle">Unit</h2><p id="uRes" class="u-res" hidden>Reserved. Message us for similar units.</p></div>
+      <form method="dialog"><button class="msg-close" aria-label="Close">✕</button></form>
+    </div>
+    <img id="uImg" class="u-img" alt="" width="640" height="480">
+    <ul class="u-specs" id="uSpecs"></ul>
+    <button class="btn btn-lime" id="uAsk" type="button">Ask about this unit</button>
+    <a class="btn btn-ghost" href="tel:+639564665377">Call 0956 466 5377</a>
+    <p class="u-toast" id="uToast" role="status"></p>
+  </div>
+</dialog>
+
+<script src="../assets/units.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.3.27/dist/lenis.min.js"></script>
@@ -378,19 +503,17 @@
         });
       });
 
-      // featured unit: crossfade photos and light up specs as you read
-      const specs = gsap.utils.toArray(".specs li"), pics = gsap.utils.toArray(".photos img");
-      ScrollTrigger.create({
-        trigger: ".unit-grid", start: "top 70%", end: "bottom 30%",
-        onUpdate: self => {
-          const i = Math.min(specs.length - 1, Math.floor(self.progress * specs.length));
-          specs.forEach((li, k) => li.classList.toggle("on", k <= i));
-          pics.forEach((p, k) => gsap.to(p, { opacity: k === i ? 1 : 0, duration: .45, overwrite: true }));
-        }
+      // car wall: cards rise in rows as they enter
+      gsap.set(".car", { y: 40, opacity: 0, scale: .96 });
+      ScrollTrigger.batch(".car", { start: "top 92%", once: true,
+        onEnter: els => gsap.to(els, { y: 0, opacity: 1, scale: 1, duration: .7, ease: "power3.out", stagger: .06, overwrite: true }) });
+      document.addEventListener("wall:filter", () => {
+        gsap.fromTo(".car:not([hidden])", { y: 18, opacity: 0, scale: 1 }, { y: 0, opacity: 1, scale: 1, duration: .45, ease: "power2.out", stagger: .03, overwrite: true });
+        ScrollTrigger.refresh();
       });
 
       // generic reveals
-      ScrollTrigger.batch(".eyebrow, .h2, .sub, .addr, .phones li", { start: "top 90%", once: true,
+      ScrollTrigger.batch(".eyebrow, .h2, .sub, .addr, .phones li, .q, .released, .package, .map, .chips, .wall-note", { start: "top 90%", once: true,
         onEnter: els => gsap.from(els, { y: 28, opacity: 0, duration: .8, ease: "power3.out", stagger: .07 }) });
     });
 
@@ -418,6 +541,10 @@
       gsap.utils.toArray(".stop").forEach(s => gsap.from(s, { x: 30, opacity: 0, duration: .7, ease: "power3.out", scrollTrigger: { trigger: s, start: "top 85%", once: true } }));
     });
   }
+
+  // ---- dialogs pause smooth scroll
+  window.jlOpenModal = d => { lenis?.stop(); d.showModal(); };
+  document.getElementById("unitDialog").addEventListener("close", () => lenis?.start());
 
   // ---- Message chooser
   const msgDialog = document.getElementById("msgDialog");
